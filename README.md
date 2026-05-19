@@ -2,12 +2,13 @@
 
 工作日报 / 周报 / 技术札记。Claude 维护, 我审阅。
 
-## 结构
+## 项目
 
-- `daily/YYYY-MM-DD.md` — 每日工作日报
-- `weekly/YYYY-WW.md` — 周报 (ISO week)
-- `notes/` — 长篇技术札记 / 调研
+每个项目一个顶层目录, 各自独立 `daily/ weekly/ notes/`。
 
-## 当前主线
+- [**FieldQuanta**](./FieldQuanta/) — OMol25 分子力场 (~/predict_molecule, fairchem_unit 分支)
+  - `daily/YYYY-MM-DD.md` — 每日工作日报
+  - `weekly/YYYY-WW.md` — 周报 (ISO week)
+  - `notes/` — 长篇技术札记 / 调研
 
-`~/predict_molecule` (fairchem_unit 分支) — OMol25 力场模型, TransIP-S paper 对齐 baseline。
+后续新项目按相同结构挂在顶层。

@@ -75,6 +75,24 @@ if "forces" in out and f_t is not None:
 
 启动 yaml 见 `daily/2026-05-19.md` 末尾段。新 run 用独立 `timestamp_id` (含 `l2norm_resume` 后缀) 避免覆盖 MSE run 的 ckpt — MSE run 当作"已完成对照组", 它的 65 个 eval block + plateau 证据已经记在 `2026-05-19_strict_baseline_eval_curve.md`。
 
+### 2026-05-19 21:15 update — L2NormLoss resume 验证结果
+
+启动后 ~2 hr 跑了 6 epoch (step 110000 → 125800, epoch 42 → 48):
+
+| metric | MSE epoch 42 | L2 epoch 48 | 6 ep 变化 | 斜率对比 |
+|---|---|---|---|---|
+| F (meV/Å) | 55.76 | **48.12** | **-7.6** | **-1.3/epoch (~13× faster than MSE -0.1/epoch plateau)** |
+| E (meV/atom) | 4.80 | 4.48 | -0.32 | -0.05/epoch (跟 MSE 时类似) |
+| F_cos | 0.933 | 0.952 | +0.019 | — |
+
+**假说实锤**: L2NormLoss 切换后 F 急剧加速下降, 验证 paper text "L_F = MSE" 是 typo, paper 31.9 实际是 L2NormLoss 训出来的。
+
+外推 80 epoch (剩 32 epoch):
+- 朴素线性: F = 48.12 − 32×1.3 = **15.7 meV/Å** (远低于 paper 31.9)
+- 现实考虑自然 plateau, 终态估 **30-35 meV/Å**, 追平 paper
+
+注: 这次 resume 复用 MSE run 的 `timestamp_id`, 不是独立 `l2norm_resume` 后缀那个。理由: 独立 timestamp_id 会让 fairchem 在空目录 auto-resume 失败 (实测从 step_0 重训了), 改回同 dir 续训, train loss 曲线在 step 110000 处会跳变 (MSE → L2 norm 公式不同, 不代表实际差), eval mae 跨 loss 可比。
+
 ## Followup
 
 - 把这个 audit 写邮件给 TransIP 作者, 问 paper text 是否 typo (低优, 可选)

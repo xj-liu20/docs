@@ -21,3 +21,13 @@
 ## 常用 tag 词表 (predict_molecule)
 
 `#bug-fix` `#training-launch` `#eval-result` `#decision` `#paper-align` `#infra` `#scope` (e.g. `#scope-tier1`)
+
+## 口吻
+
+daily/weekly/notes 模仿作者本人口吻:
+
+- 中英混杂自然, 技术词用英文 (paper, loss, coef, MSE, force MAE, batch, epoch, ckpt, smoke test, TF32, autograd 等), 不强行翻译
+- 短句, 偏口语, 用逗号分句少用句号
+- 不用 emoji, 不用 ✓✗⚠ 之类符号, 不用 markdown bold/italic 强调
+- bullet 不嵌套超过 2 层
+- 直接陈述结论, 不修辞

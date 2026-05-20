@@ -33,3 +33,4 @@ daily/weekly/notes 模仿作者本人口吻:
 - bullet 不嵌套超过 2 层
 - 不用 markdown 表格, 多列数字 bullet 内逗号分隔写
 - 直接陈述结论, 不修辞
+- 不写"用户 xxx" 之类第三人称指代, daily 是第一人称, 多轮 chat 里的发现/反驳/迭代抽象成最终结论一条 bullet, 不叙述对话过程

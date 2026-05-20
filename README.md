@@ -28,6 +28,8 @@ daily/weekly/notes 模仿作者本人口吻:
 
 - 中英混杂自然, 技术词用英文 (paper, loss, coef, MSE, force MAE, batch, epoch, ckpt, smoke test, TF32, autograd 等), 不强行翻译
 - 短句, 偏口语, 用逗号分句少用句号
-- 不用 emoji, 不用 ✓✗⚠ 之类符号, 不用 markdown bold/italic 强调
+- 不用 emoji, 不用 ✓✗⚠ 之类符号
+- markdown bold 极克制, 一篇至多 1-2 处用在关键决策/路线名, 不在每个观察上加; 禁 italic
 - bullet 不嵌套超过 2 层
+- 不用 markdown 表格, 多列数字 bullet 内逗号分隔写
 - 直接陈述结论, 不修辞

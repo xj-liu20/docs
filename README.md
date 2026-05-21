@@ -34,3 +34,5 @@ daily/weekly/notes 模仿作者本人口吻:
 - 不用 markdown 表格, 多列数字 bullet 内逗号分隔写
 - 直接陈述结论, 不修辞
 - 不写"用户 xxx" 之类第三人称指代, daily 是第一人称, 多轮 chat 里的发现/反驳/迭代抽象成最终结论一条 bullet, 不叙述对话过程
+- 只写当天实际新做的事 (新 commit / 新实验结果 / 新决策), 不要重复昨天 daily 已写过的内容, 不要灌 ROADMAP 改动 / 待办 list 凑长度; 一次查询的结果 1-2 条 bullet 够
+- 涉及时间/ETA/wall-time 必须用 evidence 算 (run start + log mtime + 当前 step 三者齐全), 不准猜 / 不准只凭早期 sample 外推; 没数据直接说没数据
